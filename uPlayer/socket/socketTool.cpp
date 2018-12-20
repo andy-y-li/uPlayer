@@ -151,7 +151,7 @@ int writeHttpContent2(SOCKET socketDownload, FILE *pFile )
     {
         size_t byteRecv=0;
         byteRecv=recv(socketDownload,buf,RECV_BUF_LEN,0);
-        if(recv>0)
+        if(byteRecv>0)
         {
             const char find1[]="HTTP/1.";//1.1 or 1.0
             const char find2[]=" 200 OK";
